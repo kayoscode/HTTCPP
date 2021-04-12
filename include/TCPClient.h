@@ -4,6 +4,8 @@
 #include <string>
 #include <stdint.h>
 
+#define HTTP_PORT 80
+
 /**
  * Interface for handling a TCP connection
  * @author Bryce Young (April 11, 2021)

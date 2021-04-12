@@ -1,11 +1,12 @@
 #include <iostream>
-#include "HTTPClient.h"
+#include "HTTPSClient.h"
+#include "TLS/Random.h"
 
 int main() {
-    HTTPClient client;
+    HTTPSClient client;
     std::string response;
 
-    HTTPRequest request("www.brycemyoung.com");
+    HTTPRequest request("https://store.steampowered.com");
     client.get(request, response);
 
     std::cout << response << "\n";

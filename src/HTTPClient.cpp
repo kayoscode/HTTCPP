@@ -75,7 +75,7 @@ void HTTPClient::get(const HTTPRequest& request, std::string& resp) {
 
     //create GET request text
     req << "GET " << request.url.getPath() << " HTTP/" << version << "\r\nHOST: " << request.url.getHost() << "\r\n" << "Connection: close\r\n\r\n";
-    TCPClient connection(request.url.getHost(), 80);
+    TCPClient connection(request.url.getHost(), HTTP_PORT);
     connection.send(req.str());
 
     int bytesRead = 0;

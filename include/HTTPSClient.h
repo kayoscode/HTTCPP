@@ -2,13 +2,9 @@
 #define INCLUDE_HTTPSCLIENT_H
 
 #include <string>
+#include "HTTPClient.h"
 
-/**
- * Details about an HTTPS request
- * @author Bryce Young
- * */
-struct HTTPSRequest {
-};
+#define HTTPS_PORT 443
 
 /**
  * Creates an HTTPS request interface
@@ -23,14 +19,14 @@ class HTTPSClient {
          * @param request details about the request
          * @param response the response from the server
          * */
-        void get(HTTPSRequest& request, std::string& response);
+        void get(HTTPRequest& request, std::string& response);
 
         /**
          * Create an post request
          * @param request details about the request
          * @param response the response from the server
          * */
-        void post(HTTPSRequest& request, std::string& response);
+        void post(HTTPRequest& request, std::string& response);
 
     private:
 };

@@ -31,7 +31,7 @@ inline void parseURL(const std::string& url, URLProtocol& protocol, std::string&
 
     if(i < urlTmp.size()) {
         //set the path from the rest of the string
-        //if we hit a '?', we've gotta bail because we don't handle
+        //if we get hit with a '?', we've gotta bail because we don't handle
         //get request variables here!
         for(int j = i; j < urlTmp.size(); j++) {
             if(urlTmp[j] == '?') {

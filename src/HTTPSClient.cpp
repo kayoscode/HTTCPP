@@ -4,8 +4,6 @@
 #include "TLS/TLSHandshake.h"
 #include "TCPClient.h"
 
-#define TLS_VERSION "1.0"
-
 HTTPSClient::HTTPSClient() {
 
 }

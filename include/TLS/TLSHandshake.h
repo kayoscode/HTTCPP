@@ -1,6 +1,21 @@
 #ifndef INCLUDE_TLS_HANDSHAKE_H
 #define INCLUDE_TLS_HANDSHAKE_H
 
+/**
+ * Implementation of the TLS handshake based on specifications 
+ * from:
+ * https://tools.ietf.org/html/rfc5246
+ * 
+ * @author Bryce Young April 11, 2021
+ * */
+
+/**
+ * The version of TLS 1.x
+ * */
+enum class TLSVersion {
+    TWO
+};
+
 #include "HTTPSClient.h"
 #include "TCPClient.h"
 

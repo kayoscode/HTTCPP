@@ -1,5 +1,5 @@
 #include "TLS/TLSHandshake.h"
-#include "TLS/Random.h"
+#include "SecureRandom.h"
 
 TLSHandshake::TLSHandshake() {
     generateRandomSequence(clientRandom, TLS_RANDOM_SIZE);

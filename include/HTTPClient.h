@@ -5,6 +5,7 @@
 #include <map>
 
 #include "TCPClient.h"
+#include "URL.h"
 
 /**
  * HTTP version supported.
@@ -26,9 +27,7 @@ struct HTTPRequest {
      * @param host the host name or ip
      * @param version the version of http to use (Defaults to http1.1)
      * */
-    HTTPRequest(const std::string& host, HTTPVersion version = HTTPVersion::ONE) 
-        :host(host), version(version)
-    {}
+    HTTPRequest(const std::string& url, HTTPVersion version = HTTPVersion::ONE);
 
     /**
      * Sets a variable for the request
@@ -38,7 +37,7 @@ struct HTTPRequest {
     void setVariable(const std::string& name, const std::string& value) {
         variables[name] = value;
     }
-    
+
     /**
      * Removes a variable from the list of vars by name
      * @param name the name of the variable to remove
@@ -52,7 +51,7 @@ struct HTTPRequest {
     }
 
     HTTPVersion version;
-    std::string host;
+    URL url;
     std::map<std::string, std::string> variables;
 };
 

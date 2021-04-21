@@ -1,4 +1,4 @@
-#if defined(__WIN32) || defined(WIN32)
+#if defined(__WIN32) || defined(WIN32) || defined(_WIN32)
 
 #include <iostream>
 #include <winsock2.h>

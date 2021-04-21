@@ -9,7 +9,6 @@ file(GLOB SRC
     "src/TLS/*.cpp"
     "src/windows/*.cpp"
     "src/linux/*.cpp"
-    "src/macos/*.cpp"
     "src/*.cpp"
     "include/*.h"
     "include/TLS/*.h"
@@ -18,6 +17,10 @@ file(GLOB SRC
 add_executable(${PROJ_NAME}
     "${SRC}"
 )
+
+if(WIN32)
+    target_link_libraries(${PROJ_NAME} wsock32 ws2_32)
+endif()
 
 target_link_libraries(${PROJ_NAME} 
     CPPCrypto

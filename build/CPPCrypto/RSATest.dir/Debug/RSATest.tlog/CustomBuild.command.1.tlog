@@ -1,0 +1,10 @@
+^C:\USERS\BRYCE\DOCUMENTS\HTTCPP\CPPCRYPTO\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Bryce/Documents/HTTCPP -BC:/Users/Bryce/Documents/HTTCPP/build --check-stamp-file C:/Users/Bryce/Documents/HTTCPP/build/CPPCrypto/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

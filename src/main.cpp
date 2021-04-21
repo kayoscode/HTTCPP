@@ -1,13 +1,7 @@
 #include <iostream>
-#include "AESEngine.h"
+#include "TCPClient.h"
 
 int main() {
-    unsigned char keyData[] = "0000000000000001";
-    AESKey* key = new AESKey(keyData, AESKeyType::AES_KEY128);
-    AESEngine aes(key);
-
-    std::string output;
-    aes.encyrptText("bryceyoungreallyisthebestpersonintheworld", output);
-
+    TCPClient("www.google.com", 80);
     return 0;
 }

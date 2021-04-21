@@ -1,7 +1,13 @@
 #include <iostream>
-#include "TCPClient.h"
+#include "HTTPClient.h"
+#include <string>
 
 int main() {
-    TCPClient("www.google.com", 80);
+    HTTPClient http;
+    HTTPRequest request("http://www.google.com");
+    std::string response;
+    http.get(request, response);
+
+    std::cout << response << "\n";
     return 0;
 }
